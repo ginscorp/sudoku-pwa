@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru" data-theme="graphite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#181b1f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Судоку">
+  <meta name="description" content="Судоку: семь уровней, школа, история игры и офлайн без рекламы.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Судоку</title>
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><span class="brandname">SUDOKU</span><h1>Судоку<span>.</span></h1></div></div>
+      <nav class="top-actions" aria-label="Меню"><button class="icon-button" id="learn-button" aria-label="Обучение судоку" data-icon="book"></button><button class="icon-button" id="stats-button" aria-label="Статистика" data-icon="chart"></button><button class="icon-button" id="settings-button" aria-label="Настройки и оформление" data-icon="settings"></button></nav>
+    </header>
+    <section class="game-meta" aria-label="Текущая партия">
+      <button class="difficulty" id="new-button" aria-label="Новая игра и уровень сложности"><span class="difficulty-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="level-label">Максимальный</span><span data-icon="chevron"></span></button>
+      <button class="timer" id="pause-button" aria-label="Приостановить игру"><span id="timer">00:00</span><span data-icon="pause"></span></button>
+    </section>
+    <section class="board-wrap" aria-label="Игровое поле">
+      <div id="board" class="board" role="group" aria-label="Судоку, 9 строк и 9 столбцов"></div>
+      <div class="pause-layer" id="pause-layer" hidden><span class="pause-symbol" data-icon="pause"></span><h2 id="pause-title">Пауза</h2><p id="pause-copy">Время остановлено. Продолжим?</p><button class="primary" id="resume-button">Продолжить игру <span data-icon="play"></span></button></div>
+      <div class="loading-layer" id="loading-layer"><span class="spinner"></span><span>Готовим вашу задачу</span></div>
+    </section>
+    <div class="board-caption"><span id="cell-caption">Выберите клетку</span><span id="progress">0 / 81</span></div>
+    <section id="completion-controls" class="completion-controls" aria-label="Просмотр решения" hidden>
+      <button class="primary" id="close-solution">Закрыть решение</button>
+      <button class="secondary" id="completed-next">Следующая задача</button>
+    </section>
+    <section id="focus-tools" class="focus-tools" aria-label="Инструменты игры" hidden></section>
+    <section class="note-controls" aria-label="Режим ввода">
+      <button id="pencil-button" class="pencil-button" aria-pressed="false"><span data-icon="pencil"></span><span>Карандаш</span><i class="toggle-dot"></i></button>
+      <button id="candidates-button" class="candidates-button" aria-label="Все варианты на поле"><span class="mini-grid" aria-hidden="true">1 2<br>3 4</span><span>Варианты</span></button>
+    </section>
+    <section class="controls" aria-label="Клавиатура">
+      <div class="tools"><button id="undo-button" class="tool-button"><span data-icon="undo"></span><span>Отмена</span></button><button id="redo-button" class="tool-button"><span data-icon="redo"></span><span>Вернуть</span></button><button id="erase-button" class="tool-button"><span data-icon="erase"></span><span>Стереть</span></button><button id="hint-button" class="tool-button"><span data-icon="hint"></span><span>Подсказка</span></button></div>
+      <div id="numpad" class="numpad"></div>
+    </section>
+    <footer class="statusbar"><button id="offline-button" class="quiet"><i class="status-dot" id="offline-dot"></i><span id="offline-label">Подготовка офлайн</span></button><span id="save-label">На вашем устройстве</span></footer>
+    <button id="account-button" class="sync-status" aria-label="Локальные данные и история">История</button>
+    <button class="update-notice" id="update-button" hidden>Доступна новая версия · обновить</button>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="sheet"><div class="sheet-inner"><div class="sheet-handle" aria-hidden="true"></div><header class="sheet-header"><div><span class="eyebrow" id="sheet-eyebrow">СУДОКУ</span><h2 id="sheet-title"></h2></div><button class="icon-button" id="close-sheet" aria-label="Закрыть" data-icon="close"></button></header><div id="sheet-content"></div></div></dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <noscript>Для игры включите JavaScript в настройках Safari.</noscript>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

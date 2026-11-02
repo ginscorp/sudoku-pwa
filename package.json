@@ -1,0 +1,15 @@
+{
+  "name": "sudoku-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Standalone offline Sudoku with lessons and a local move journal",
+  "scripts": {
+    "start": "python3 scripts/serve.py",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
