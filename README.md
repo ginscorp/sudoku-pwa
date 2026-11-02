@@ -2,6 +2,10 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
+![Sudoku: dark and paper themes and local game replay](docs/assets/hero-en.png)
+
+[Start locally](#start-locally) · [Screenshots](#screenshots) · [How puzzles work](#how-additional-puzzles-are-checked)
+
 A standalone, offline-capable Sudoku game with guided lessons and a local move journal. Public release **0.1.0**. The interface is currently **Russian**; the documentation is available in English and Russian.
 
 ## Features
@@ -44,6 +48,21 @@ node --test tests/*.test.mjs
 ```
 
 The tests cover the generated catalog, solver, state transitions, hints, candidate diagrams, statistics, worker generation, completed-digit input and offline cache behavior. Browser checks and the actual environments used for this release are recorded in [VALIDATION.md](VALIDATION.md). A desktop/mobile-emulation result does not establish physical iPhone or every-browser compatibility.
+
+## Screenshots
+
+Actual screens of the standalone public edition, captured in Chrome mobile emulation with synthetic demo data. The interface is Russian. Select an image to view it at full resolution.
+
+<table>
+<tr>
+<td align="center" width="50%"><strong>Play offline · dark theme</strong><br><br><a href="docs/assets/game-dark.png"><img src="docs/assets/game-dark.png" width="360" alt="Play offline · dark theme"></a></td>
+<td align="center" width="50%"><strong>Paper theme · pencil marks</strong><br><br><a href="docs/assets/game-paper.png"><img src="docs/assets/game-paper.png" width="360" alt="Paper theme · pencil marks"></a></td>
+</tr>
+<tr>
+<td align="center" width="50%"><strong>Learn the logic · X-Wing</strong><br><br><a href="docs/assets/lesson-xwing.png"><img src="docs/assets/lesson-xwing.png" width="360" alt="Learn the logic · X-Wing"></a></td>
+<td align="center" width="50%"><strong>Review your moves · local replay</strong><br><br><a href="docs/assets/replay.png"><img src="docs/assets/replay.png" width="360" alt="Review your moves · local replay"></a></td>
+</tr>
+</table>
 
 ## Files and technology
 

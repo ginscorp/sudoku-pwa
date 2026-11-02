@@ -10,3 +10,7 @@ Read README.md and README.ru.md before changing the game. The interface is Russi
 - Update the service-worker asset list for added/removed application assets. Change its cache version when shipping changed cached bytes.
 - Keep changes focused. Do not deploy, publish, send data, delete user saves or install system services merely to inspect the project. Respect the operator's source-control rules; never initialize Git as an incidental setup step.
 - Return the change, checks actually run, remaining limitations and any required user decision. Preserve MIT and reference notices.
+
+## Visual documentation
+
+Keep the README screenshots and covers accurate for this standalone edition. Capture real application states using an isolated browser profile and synthetic data; exclude accounts, personal journals, service addresses, browser chrome and notifications. Preserve image provenance and inspect both pixels and metadata before any authorized upload. Keep English/Russian alt text and captions consistent. A mobile-emulation screenshot is not a physical-device test. Command-line-only components may instead demonstrate their input, exact command and expected output as copyable Markdown.
