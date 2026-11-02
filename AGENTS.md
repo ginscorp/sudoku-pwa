@@ -14,3 +14,10 @@ Read README.md and README.ru.md before changing the game. The interface is Russi
 ## Visual documentation
 
 Keep the README screenshots and covers accurate for this standalone edition. Capture real application states using an isolated browser profile and synthetic data; exclude accounts, personal journals, service addresses, browser chrome and notifications. Preserve image provenance and inspect both pixels and metadata before any authorized upload. Keep English/Russian alt text and captions consistent. A mobile-emulation screenshot is not a physical-device test. Command-line-only components may instead demonstrate their input, exact command and expected output as copyable Markdown.
+
+
+## Release coordination
+
+After a meaningful, ready change, record the local version, user-visible changes, checks and differences from the last verified published revision, even if the version number did not change. Propose a concrete GitHub update to the maintainer. Agree the release-review cadence per product: a number of ready versions and, when useful, a maximum wait. Do not count individual commits or draft builds as ready versions. Until a cadence is agreed, raise each meaningful ready change for review; discuss security fixes, data-loss risks and a broken primary launch promptly.
+
+Keep a concise pending-change handoff and report whether publication is current, needs review, or has only been prepared. Do not claim the remote state is current without verification. Refresh both README languages, examples and affected real anonymized screenshots when behavior changes. A cadence agreement does not authorize uploads: prepare and verify the exact scope, obtain applicable maintainer authorization, and perform a fresh source-revision and final sensitive-data/metadata review before publishing. Preserve the operator's local Git restrictions. After an authorized update, verify the published revision and close only the changes actually included.
